@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sub6() 
+int main() 
 
 {
 

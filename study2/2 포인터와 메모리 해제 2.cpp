@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sub2() {
+int main() {
 	// new 연산자
 	/*
 	어떤 데이터형을 원하는지 new 연산자 에게 알려주면

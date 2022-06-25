@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sub4() {
+int main() {
 
 	//반복문이란?
 	// 관계 표현식 <, <=, >, >=, ==, != 

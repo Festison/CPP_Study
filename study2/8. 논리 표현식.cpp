@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sub8() {
+int main() {
 	//논리 표현식
 	//논리합, 논리곱 , 논리부정 연산자
 

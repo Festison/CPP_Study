@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int sub3() {
+int main() {
 
 	char animal[SIZE];
 	char* ps;

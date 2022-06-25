@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sub5() {
+int main() {
 	//while¹®, do while¹®
 
 	bool j = false;

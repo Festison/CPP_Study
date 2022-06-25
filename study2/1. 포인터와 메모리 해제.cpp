@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sub1() {
+int main() {
 	// C++ : 객체지향 프로그래밍
 	/*
 	컴파일 시간이 아닌 실행 시간에 어떠한 결정을 내릴 수 있다.

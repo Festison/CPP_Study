@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sub7() {
+int main() {
 	//분기 구문 : if 구문
 
 	if (false) {
