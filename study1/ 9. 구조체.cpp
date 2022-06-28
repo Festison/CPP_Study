@@ -3,10 +3,10 @@
 using namespace std;
 
 int main() {
-	//±¸Á¶Ã¼ : ´Ù¸¥ µ¥ÀÌÅÍÇüÀÌ Çã¿ëµÇ´Â µ¥ÀÌÅÍÀÇ ÁýÇÕ
-	// ¹è¿­ : °°Àº µ¥ÀÌÅÍÇüÀÇ ÁýÇÕ 
+	//êµ¬ì¡°ì²´ : ë‹¤ë¥¸ ë°ì´í„°í˜•ì´ í—ˆìš©ë˜ëŠ” ë°ì´í„°ì˜ ì§‘í•©
+	// ë°°ì—´ : ê°™ì€ ë°ì´í„°í˜•ì˜ ì§‘í•© 
 
-	//Ãà±¸¼±¼ö
+	//ì¶•êµ¬ì„ ìˆ˜
 	struct MyStruct
 	{
 		string name;
