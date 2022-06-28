@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 
-	// + - * / % »ê¼ú ¿¬»êÀÚ
+	// + - * / % Â»ÃªÂ¼Ãº Â¿Â¬Â»ÃªÃ€Ãš
 
 	int a = 10;
 	int b = 3;
@@ -23,9 +23,9 @@ int main(){
 
 	//auto 
 
-	auto n = 100; // nÀº int
-	auto x = 1.5; // x ´Â float
-	auto y = 1.3e12L; //y´Â long long
+	auto n = 100; // nÃ€Âº int
+	auto x = 1.5; // x Â´Ã‚ float
+	auto y = 1.3e12L; //yÂ´Ã‚ long long
 
 	return 0;
 }
