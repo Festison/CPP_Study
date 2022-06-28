@@ -3,15 +3,15 @@
 using namespace std;
 
 int main() {
-	//char : ÀÛÀº ¹®ÀÚÇü 
+	//char : ìž‘ì€ ë¬¸ìží˜• 
 
 	char f = 'a';
-	// null ¹®ÀÚ '\0'
-	// "">> ¸í½ÃÀûÀ¸·Î null¹®ÀÚ Æ÷ÇÔ 
+	// null ë¬¸ìž '\0'
+	// "">> ëª…ì‹œì ìœ¼ë¡œ nullë¬¸ìž í¬í•¨ 
 
 	cout << f << endl;
 
-	//bool : 0 È¤Àº 1 ¸¸ ³ªÅ¸³¿
+	//bool : 0 í˜¹ì€ 1 ë§Œ ë‚˜íƒ€ëƒ„
 
 	bool a = 0;
 	bool b = 1;
