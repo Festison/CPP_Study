@@ -12,10 +12,10 @@ struct StatInfo
 int main()
 {
 
-	// ¸ó½ºÅÍ°¡ ÃÖ´ë 1¸¸¸¶¸®
-	// TYPE ÀÌ¸§[°³¼ö];
+	// ëª¬ìŠ¤í„°ê°€ ìµœëŒ€ 1ë§Œë§ˆë¦¬
+	// TYPE ì´ë¦„[ê°œìˆ˜];
 
-	// ¹è¿­ÀÇ Å©±â´Â »ó¼ö¿©¾ß ÇÔ
+	// ë°°ì—´ì˜ í¬ê¸°ëŠ” ìƒìˆ˜ì—¬ì•¼ í•¨
 
 	const int monsterCount = 10;
 	StatInfo monsters[monsterCount];
@@ -23,39 +23,39 @@ int main()
 	int a = 10;
 	int b = a;
 
-	// ¹è¿­ÀÇ ÀÌ¸§Àº Á¶±İ ´Ù¸£°Ô ÀÛµ¿
-	// ¹è¿­ÀÇ ÀÌ¸§Àº °ğ ¹è¿­ÀÇ ½ÃÀÛ ÁÖ¼Ò
-	// Á¤È®È÷´Â ½ÃÀÛ À§Ä¡¸¦ °¡¸®Å°´Â TYPE* Æ÷ÀÎÅÍ
+	// ë°°ì—´ì˜ ì´ë¦„ì€ ì¡°ê¸ˆ ë‹¤ë¥´ê²Œ ì‘ë™
+	// ë°°ì—´ì˜ ì´ë¦„ì€ ê³§ ë°°ì—´ì˜ ì‹œì‘ ì£¼ì†Œ
+	// ì •í™•íˆëŠ” ì‹œì‘ ìœ„ì¹˜ë¥¼ ê°€ë¦¬í‚¤ëŠ” TYPE* í¬ì¸í„°
 	auto WhoAml = monsters;
 
 	// StatInfo [ 100,10,1 ] 
-	// monster_0 [ ÁÖ¼Ò ]
+	// monster_0 [ ì£¼ì†Œ ]
 	StatInfo* monster_0 = monsters;
 	monster_0->hp = 100;
 	monster_0->attack = 10;
 	monster_0->defence = 1;
 
-	// Æ÷ÀÎÅÍÀÇ µ¡¼À StatInfo Å¸ÀÔ ¹Ù±¸´Ï ÇÑ°³¾¿ ÀÌµ¿ÇÏ¶ó´Â ÀÇ¹Ì
+	// í¬ì¸í„°ì˜ ë§ì…ˆ StatInfo íƒ€ì… ë°”êµ¬ë‹ˆ í•œê°œì”© ì´ë™í•˜ë¼ëŠ” ì˜ë¯¸
 	StatInfo* monster_1 = monsters + 1;
 	monster_1->hp = 200;
 	monster_1->attack = 20;
 	monster_1->defence = 2;
 
-	// Æ÷ÀÎÅÍ¿Í ÂüÁ¶´Â ÀÚÀ¯ÀÚÀç·Î º¯È¯ÀÌ °¡´ÉÇÏ´Ù.
+	// í¬ì¸í„°ì™€ ì°¸ì¡°ëŠ” ììœ ìì¬ë¡œ ë³€í™˜ì´ ê°€ëŠ¥í•˜ë‹¤.
 	// StatInfo[ ] StatInfo [ ] monster_2 [ ] 
 	StatInfo& monster_2 = *(monsters + 2);
 	monster_2.hp = 300;
 	monster_2.attack = 30;
 	monster_2.defence = 3;
 
-	// ¼¼¹øÂ° µ¥ÀÌÅÍ¿¡ ÀÖ´Â ³»¿ë¹°À» º¹»ç temp [ ³»¿ë¹° ]
+	// ì„¸ë²ˆì§¸ ë°ì´í„°ì— ìˆëŠ” ë‚´ìš©ë¬¼ì„ ë³µì‚¬ temp [ ë‚´ìš©ë¬¼ ]
 	StatInfo temp;
 	temp = *(monsters + 2);
 	temp.hp = 400;
 	temp.attack = 40;
 	temp.defence = 4;
 
-	// ÀÚµ¿È­
+	// ìë™í™”
 	for (int i = 0; i < 10; i++)
 	{
 		StatInfo& monster = *(monsters + i);
@@ -64,8 +64,8 @@ int main()
 		monster.defence = 1 * (i + 1);
 	}
 
-	// ´õ ÆíÇÑ ¹æ¹ıÀ¸·Î´Â ÀÎµ¦½º°¡ ÀÖ´Ù.
-	// ¹è¿­Àº 0¹øºÎÅÍ ½ÃÀÛ N¹øÂ° ÀÎµ¦½º¿¡ ÇØ´çÇÏ´Â µ¥ÀÌÅÍ¿¡ Á¢±ÙÇÏ·Á¸é ¹è¿­ÀÌ¸§[N]
+	// ë” í¸í•œ ë°©ë²•ìœ¼ë¡œëŠ” ì¸ë±ìŠ¤ê°€ ìˆë‹¤.
+	// ë°°ì—´ì€ 0ë²ˆë¶€í„° ì‹œì‘ Në²ˆì§¸ ì¸ë±ìŠ¤ì— í•´ë‹¹í•˜ëŠ” ë°ì´í„°ì— ì ‘ê·¼í•˜ë ¤ë©´ ë°°ì—´ì´ë¦„[N]
 	// *(monsters + i) = monster[i]
 	
 	monsters[0].hp = 100;
@@ -79,7 +79,7 @@ int main()
 		monsters[i].defence = 1 * (i + 1);
 	}
 
-	// ¹è¿­ ÃÊ±âÈ­ ¹®¹ı
+	// ë°°ì—´ ì´ˆê¸°í™” ë¬¸ë²•
 	int numbers[5] = { 0,1,2,3 };
 	cout << numbers << endl;
 
