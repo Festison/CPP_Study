@@ -11,7 +11,7 @@ struct StatInfo
 void EnterLobby();
 StatInfo CreatePlayer();
 void CreateMonster(StatInfo* info);
-bool StartBattle(StatInfo* player, StatInfo* monster); // ÇÃ·¹ÀÌ¾î ½Â¸® ½Ã true, ÆĞ¹è ½Ã false
+bool StartBattle(StatInfo* player, StatInfo* monster); // í”Œë ˆì´ì–´ ìŠ¹ë¦¬ ì‹œ true, íŒ¨ë°° ì‹œ false
 
 
 int main()
@@ -22,44 +22,44 @@ int main()
 
 void EnterLobby()
 {
-	cout << "·Îºñ¿¡ ÀÔÀåÇß½À´Ï´Ù." << endl;
+	cout << "ë¡œë¹„ì— ì…ì¥í–ˆìŠµë‹ˆë‹¤." << endl;
 
 	StatInfo player;
 	player.hp = 0xbbbbbbbb;
 	player.attack = 0xbbbbbbbb;
 	player.defence = 0xbbbbbbbb;
 
-	// [¸Å°³º¯¼ö][RET][Áö¿ªº¯¼ö(temp(100, 10, 2) player(b,b,b))] [¸Å°³º¯¼ö(&temp)][RET][Áö¿ªº¯¼ö(ret(100, 10, 2))] 
+	// [ë§¤ê°œë³€ìˆ˜][RET][ì§€ì—­ë³€ìˆ˜(temp(100, 10, 2) player(b,b,b))] [ë§¤ê°œë³€ìˆ˜(&temp)][RET][ì§€ì—­ë³€ìˆ˜(ret(100, 10, 2))] 
 	player = CreatePlayer();
 
 	StatInfo monster;
 	monster.hp = 0xbbbbbbbb;
 	monster.attack = 0xbbbbbbbb;
 	monster.defence = 0xbbbbbbbb;
-	// [¸Å°³º¯¼ö][RET][Áö¿ªº¯¼ö(monster(40, 8, 1)] [¸Å°³º¯¼ö(&monster)][RET][Áö¿ªº¯¼ö()] 
+	// [ë§¤ê°œë³€ìˆ˜][RET][ì§€ì—­ë³€ìˆ˜(monster(40, 8, 1)] [ë§¤ê°œë³€ìˆ˜(&monster)][RET][ì§€ì—­ë³€ìˆ˜()] 
 	CreateMonster(&monster);
 
-	// ¹ø¿Ü
-	// ±¸Á¶Ã¼³¢¸® º¹»çÇÒ °æ¿ì ¹«½¼ ÀÏÀÌ ÀÏ¾î³¯±î?
+	// ë²ˆì™¸
+	// êµ¬ì¡°ì²´ë¼ë¦¬ ë³µì‚¬í•  ê²½ìš° ë¬´ìŠ¨ ì¼ì´ ì¼ì–´ë‚ ê¹Œ?
 
 	// player = monster; 
 	// player.hp == monster.hp;
 	// player.attack == monster.attack;
-	// player.defence == monster.defence; °úÁ¤ÀÌ ½ÇÇà 
+	// player.defence == monster.defence; ê³¼ì •ì´ ì‹¤í–‰ 
 
 	bool victory = StartBattle(&player, &monster);
 
 	if (victory)
-		cout << "½Â¸®" << endl;
+		cout << "ìŠ¹ë¦¬" << endl;
 	else
-		cout << "ÆĞ¹è" << endl;
+		cout << "íŒ¨ë°°" << endl;
 }
 
 StatInfo CreatePlayer()
 {
 	StatInfo ret;
 
-	cout << "ÇÃ·¹ÀÌ¾î »ı¼º" << endl;
+	cout << "í”Œë ˆì´ì–´ ìƒì„±" << endl;
 
 	ret.hp = 100;
 	ret.attack = 10;
@@ -70,7 +70,7 @@ StatInfo CreatePlayer()
 
 void CreateMonster(StatInfo* info)
 {
-	cout << "¸ó½ºÅÍ »ı¼º" << endl;
+	cout << "ëª¬ìŠ¤í„° ìƒì„±" << endl;
 
 	info->hp = 40;
 	info->attack = 8;
@@ -94,7 +94,7 @@ bool StartBattle(StatInfo* player, StatInfo* monster)
 			monster->hp = 0;
 		}
 
-		cout << "¸ó½ºÅÍ HP : " << monster->hp << endl;
+		cout << "ëª¬ìŠ¤í„° HP : " << monster->hp << endl;
 
 		if (monster->hp==0)
 		{
@@ -107,7 +107,7 @@ bool StartBattle(StatInfo* player, StatInfo* monster)
 			damage = 0;
 		}
 
-		cout << " ÇÃ·¹ÀÌ¾î HP : " << player->hp << endl;
+		cout << " í”Œë ˆì´ì–´ HP : " << player->hp << endl;
 
 		player->hp -= damage;
 		if (player->hp<0)
