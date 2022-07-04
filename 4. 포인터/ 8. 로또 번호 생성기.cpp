@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// 1) Swap ÇÔ¼ö ¸¸µé±â
+// 1) Swap í•¨ìˆ˜ ë§Œë“¤ê¸°
 void Swap(int& a, int& b)
 {
 	int temp = a;
@@ -9,31 +9,31 @@ void Swap(int& a, int& b)
 	b = temp;
 }
 
-// 2) Á¤·Ä ÇÔ¼ö ¸¸µé±â (ÀÛÀº ¼ıÀÚ°¡ ¸ÕÀú ¿Àµµ·Ï Á¤·Ä)
+// 2) ì •ë ¬ í•¨ìˆ˜ ë§Œë“¤ê¸° (ì‘ì€ ìˆ«ìê°€ ë¨¼ì € ì˜¤ë„ë¡ ì •ë ¬)
 void Sort(int numbers[], int count)
 {
 	for (int i = 0; i < count; i++)
 	{
-		// i¹øÂ° °ªÀÌ Á¦ÀÏ ÁÁÀº ÈÄº¸¶ó°í °¡Á¤
+		// ië²ˆì§¸ ê°’ì´ ì œì¼ ì¢‹ì€ í›„ë³´ë¼ê³  ê°€ì •
 		int best = i;
 
-		// ´Ù¸¥ ÈÄº¸¿Í ºñ±³¸¦ ÅëÇØ Á¦ÀÏ ÁÁÀº ÈÄº¸¸¦ Ã£´Â´Ù.
+		// ë‹¤ë¥¸ í›„ë³´ì™€ ë¹„êµë¥¼ í†µí•´ ì œì¼ ì¢‹ì€ í›„ë³´ë¥¼ ì°¾ëŠ”ë‹¤.
 		for (int j = i+1; j < count; j++)
 		{
 			if (numbers[j] > numbers[best])
 				best = j;
 		}
 
-		// Á¦ÀÏ ÁÁÀº ÈÄº¸¿Í ±³Ã¼
+		// ì œì¼ ì¢‹ì€ í›„ë³´ì™€ êµì²´
 		if (i != best)
 			Swap(numbers[i], numbers[best]);
 	}
 }
 
-// 3) ·Î¶Ç ¹øÈ£ »ı¼º±â
+// 3) ë¡œë˜ ë²ˆí˜¸ ìƒì„±ê¸°
 void ChooseLotto(int numbers[])
 {
-	// TODO : ·£´ıÀ¸·Î 1~45 »çÀÌÀÇ ¼ıÀÚ 6°³¸¦ °ñ¶óÁÖ¼¼¿ä! (´Ü, Áßº¹ÀÌ ¾ø¾î¾ß ÇÑ´Ù)
+	// TODO : ëœë¤ìœ¼ë¡œ 1~45 ì‚¬ì´ì˜ ìˆ«ì 6ê°œë¥¼ ê³¨ë¼ì£¼ì„¸ìš”! (ë‹¨, ì¤‘ë³µì´ ì—†ì–´ì•¼ í•œë‹¤)
 	srand((unsigned)time(0));
 
 	int count = 0;
@@ -41,7 +41,7 @@ void ChooseLotto(int numbers[])
 	{
 		int randValue = 1 + (rand() % 45);
 
-		// ÀÌ¹Ì Ã£Àº °ªÀÎ°¡?
+		// ì´ë¯¸ ì°¾ì€ ê°’ì¸ê°€?
 		bool found = false;
 		for (int i = 0; i < count; i++)
 		{
@@ -52,7 +52,7 @@ void ChooseLotto(int numbers[])
 			}
 		}
 
-		// ¸ø Ã£¾ÒÀ¸¸é Ãß°¡
+		// ëª» ì°¾ì•˜ìœ¼ë©´ ì¶”ê°€
 		if (found==false)
 		{
 			numbers[count] = randValue;
@@ -65,13 +65,13 @@ void ChooseLotto(int numbers[])
 
 int main()
 {
-	// 1) Swap ÇÔ¼ö ¸¸µé±â
+	// 1) Swap í•¨ìˆ˜ ë§Œë“¤ê¸°
 	int a = 1;
 	int b = 2;
 	Swap(a, b);
 	// a = 2, b = 1
 
-	// 2) Á¤·Ä ÇÔ¼ö ¸¸µé±â (ÀÛÀº ¼ıÀÚ°¡ ¸ÕÀú ¿Àµµ·Ï Á¤·Ä)
+	// 2) ì •ë ¬ í•¨ìˆ˜ ë§Œë“¤ê¸° (ì‘ì€ ìˆ«ìê°€ ë¨¼ì € ì˜¤ë„ë¡ ì •ë ¬)
 	int numbers[6] = { 1, 42, 3, 15, 5, 6 };
 
 	int size1 = sizeof(numbers); // 24
@@ -79,10 +79,10 @@ int main()
 
 	Sort(numbers, sizeof(numbers) / sizeof(int));
 
-	// 3) ·Î¶Ç ¹øÈ£ »ı¼º±â
+	// 3) ë¡œë˜ ë²ˆí˜¸ ìƒì„±ê¸°
 	ChooseLotto(numbers);
 
-	// ·Î¶Ç ¾Û ¿Ï¼º
+	// ë¡œë˜ ì•± ì™„ì„±
 	for (int i = 0; i < 6; i++)
 	{
 		cout << numbers[i] << endl;
