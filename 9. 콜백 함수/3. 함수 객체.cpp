@@ -96,7 +96,7 @@ int main()
 	task._posX = 5;
 	task._posY = 0;
 
-	// 나중에 여유 될  일감을 실행한다.
+	// 나중에 여유가 된다면 일감을 실행한다.
 	task();
 
 	return 0;
