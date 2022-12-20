@@ -51,7 +51,7 @@ public:
 	void operator()()
 	{
 		// TODO
-		cout << "ÇØ´ç ÁÂÇ¥·Î ÇÃ·¹ÀÌ¾î ÀÌµ¿" << endl;
+		cout << "í•´ë‹¹ ì¢Œí‘œë¡œ í”Œë ˆì´ì–´ ì´ë™" << endl;
 	}
 
 public:
@@ -62,24 +62,24 @@ public:
 
 int main()
 {
-	// ÇÔ¼ö °´Ã¼ : ÇÔ¼öÃ³·³ µ¿ÀÚ°²´Â °³°³Ã¼
-	// ÇÔ¼ö Æ÷ÀÎÅÍÀÇ ´ÜÁ¡
+	// í•¨ìˆ˜ ê°ì²´ : í•¨ìˆ˜ì²˜ëŸ¼ ë™ëŠ” ê°ì²´
+	// í•¨ìˆ˜ í¬ì¸í„°ì˜ ë‹¨ì 
 
-	// ÇÔ¼ö Æ÷ÀÎÅÍ ¼±¾ð
+	// í•¨ìˆ˜ í¬ì¸í„° ì„ ì–¸
 
 	void(*pfunc)(void);
 
-	// µ¿ÀÛÀ» ³Ñ°ÜÁÙ ¶§ À¯¿ëÇÏ´Ù
+	// ë™ìž‘ì„ ë„˜ê²¨ì¤„ ë•Œ ìœ ìš©í•˜ë‹¤
 	pfunc = &HelloWorld;
 	(*pfunc)();
 
-	// ÇÔ¼ö Æ÷ÀÎÅÍ ´ÜÁ¡
-	// 1) ½Ã±×´ÏÃ³°¡ ¾È ¸ÂÀ¸¸é »ç¿ëÇÒ ¼ö ¾ø´Ù.
-	// 2) »óÅÂ¸¦ °¡Áú ¼ö ¾ø´Ù.
+	// í•¨ìˆ˜ í¬ì¸í„° ë‹¨ì 
+	// 1) ì‹œê·¸ë‹ˆì²˜ê°€ ì•ˆ ë§žìœ¼ë©´ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+	// 2) ìƒíƒœë¥¼ ê°€ì§ˆ ìˆ˜ ì—†ë‹¤.
 	// pfunc = &HelloNumber;
 
-	// [ÇÔ¼öÃ³·³ µ¿ÀÛ]ÇÏ´Â °´Ã¼
-	// () ¿¬»êÀÚ ¿À¹ö·Îµù 
+	// [í•¨ìˆ˜ì²˜ëŸ¼ ë™ìž‘]í•˜ëŠ” ê°ì²´
+	// () ì—°ì‚°ìž ì˜¤ë²„ë¡œë”© 
 	HelloWorld();
 
 	Functor functor;
@@ -87,16 +87,16 @@ int main()
 	functor();
 	bool ret = functor(3);
 
-	// MMO¿¡¼­ ÇÔ¼ö °´Ã¼¸¦ »ç¿ëÇÏ´Â ¿¹¾¾
-	// Å¬¶ó <-> ¼­¹ö
-	// ¼­¹ö : Å¬¶ó°¡ º¸³»ÁØ ³×Æ®¿öÅ© ÆÐÅ¶À» ¹Þ¾Æ¼­ Ã³¸®
-	// ex) Å¬¶ó : ³ª (5, 0) ÁÂÇ¥·Î ÀÌµ¿½ÃÄÑÁØ´Ù.
+	// MMOì—ì„œ í•¨ìˆ˜ ê°ì²´ë¥¼ ì‚¬ìš©í•˜ëŠ” ì˜ˆì”¨
+	// í´ë¼ <-> ì„œë²„
+	// ì„œë²„ : í´ë¼ê°€ ë³´ë‚´ì¤€ ë„¤íŠ¸ì›Œí¬ íŒ¨í‚·ì„ ë°›ì•„ì„œ ì²˜ë¦¬
+	// ex) í´ë¼ : ë‚˜ (5, 0) ì¢Œí‘œë¡œ ì´ë™ì‹œì¼œì¤€ë‹¤.
 	MoveTask task;
 	task._playerId = 100;
 	task._posX = 5;
 	task._posY = 0;
 
-	// ³ªÁß¿¡ ¿©À¯ µÉ ‹š ÀÏ°¨À» ½ÇÇàÇÑ´Ù.
+	// ë‚˜ì¤‘ì— ì—¬ìœ  ë  Â‹Âš ì¼ê°ì„ ì‹¤í–‰í•œë‹¤.
 	task();
 
 	return 0;
