@@ -46,7 +46,7 @@ int main()
 	// capacity (여유분을 포함한 용량 개수)
 	// 1 2 3 4 6 9 13 19 28 
 
-	vector<int> v(1000, 0);
+	vector<int> v(1000, 0); // 벡터 1000개를 0으로 초기화
 	vector<int> v2 = v;
 
 	v.resize(1000); // 데이터 크기를 명시적으로 고정 
