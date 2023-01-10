@@ -2,11 +2,11 @@
 #include<list>
 using namespace std;
 
-//vector : 동적 배열
+// vector : 동적 배열
 // [   push   ]
 // [   push   ] capacity ]
 
-// Node [  data(4) next(4/8)  ] 
+// Node [  data(4) next(4/8)  ]  -> Node [  data(4) next(4/8)  ] 
 class Node
 {
 public:
