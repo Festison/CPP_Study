@@ -13,7 +13,7 @@ int main()
 	// - 임의 접근
 
 	// 반복자(lterator) : 포인터와 유사한 개념. 컨테이너의 데이터를 가리키고 다음/이전 데이터로 이동 가능
-	vector<int>v(10);
+	vector<int> v(10);
 
 	v.reserve(1000);
 
@@ -32,7 +32,7 @@ int main()
 	cout << (*ptr) << endl; */
 
 	vector<int>::iterator itBegin = v.begin();
-	vector<int>::iterator itEnd = v.end();
+	vector<int>::iterator itEnd = v.end(); // 벡터의 끝 다음 주소를 가리킨다.
 
 	// 더복잡해 보이지만 iterator는 vector뿐만이 아니라 다른 컨테이너에도 공통적으로 있는 개념이다.
 	for (vector<int>::iterator it = v.begin(); it !=v.end(); ++it)
