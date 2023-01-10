@@ -5,18 +5,18 @@ using namespace std;
 int main()
 {
 	// STL (Standard Template Library)
-	// í”„ë¡œê·¸ëž˜ë°í•  ë•Œ í•„ìš”í•œ ìžë£Œêµ¬ì¡°/ì•Œê³ ë¦¬ì¦˜ë“¤ì„
-	// í…œí”Œë¦¿ìœ¼ë¡œ ì œê³µí•˜ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬
+	// ÇÁ·Î±×·¡¹ÖÇÒ ¶§ ÇÊ¿äÇÑ ÀÚ·á±¸Á¶/¾Ë°í¸®ÁòµéÀ»
+	// ÅÛÇÃ¸´À¸·Î Á¦°øÇÏ´Â ¶óÀÌºê·¯¸®
 
-	// ì»¨í…Œì´ë„ˆ(Container) : ë°ì´í„°ë¥¼ ì €ìž¥í•˜ëŠ” ê°ì²´ (ìžë£Œêµ¬ì¡° Data Structure)
+	// ÄÁÅ×ÀÌ³Ê(Container) : µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ´Â °´Ã¼ (ÀÚ·á±¸Á¶ Data Structure)
 
-	// vector (ë™ì  ë°°ì—´)
-	// - vectorì˜ ë™ìž¥ ì›ë¦¬ (size/capacity)
-	// - ì¤‘ê°„ ì‚½ìž…/ì‚­ì œ
-	// - ì²˜ìŒ/ë ì‚½ìž…/ì‚­ì œ
-	// - ìž„ì˜ ì ‘ê·¼
+	// vector (µ¿Àû ¹è¿­)
+	// - vectorÀÇ µ¿ÀÛ ¿ø¸® (size/capacity)
+	// - Áß°£ »ðÀÔ/»èÁ¦
+	// - Ã³À½/³¡ »ðÀÔ/»èÁ¦
+	// - ÀÓÀÇ Á¢±Ù
 	
-	// ë°°ì—´	
+	// ¹è¿­	
 	const int MAX_SIZE = 10;
 	int arr[MAX_SIZE] = { };
 
@@ -30,38 +30,38 @@ int main()
 		cout << arr[i] << endl;
 	}
 
-	// ë™ì  ë°°ì—´
-	// ë§¤ìš° ì¤‘ìš”í•œ ê°œë… -> ë°°ì—´ì„ ìœ ë™ì ìœ¼ë¡œ ì‚¬ìš©
+	// µ¿Àû ¹è¿­
+	// ¸Å¿ì Áß¿äÇÑ °³³ä -> ¹è¿­À» À¯µ¿ÀûÀ¸·Î »ç¿ë
 
-	// 1) ì—¬ìœ ë¶„ì„ ë‘ê³  ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹í•œë‹¤.
-	// 2) ì—¬ìœ ë¶„ê¹Œì§€ ê½‰ ì°¼ìœ¼ë©´, ë©”ëª¨ë¦¬ë¥¼ ì¦ì„¤í•œë‹¤.
+	// 1) ¿©À¯ºÐÀ» µÎ°í ¸Þ¸ð¸®¸¦ ÇÒ´çÇÑ´Ù.
+	// 2) ¿©À¯ºÐ±îÁö ²Ë Ã¡À¸¸é, ¸Þ¸ð¸®¸¦ Áõ¼³ÇÑ´Ù.
 
-	// Q1) ì—¬ìœ ë¶„ì€ ì–¼ë§Œí¼ì´ ì ë‹¹í• ê¹Œ? 
-	// Q2) ì¦ì„¤ì„ ì–¼ í•´ì•¼ í• ê¹Œ?
-	// Q3) ê¸°ì¡´ì˜ ë°ì´í„°ë¥¼ ì–´ë–»ê²Œ ì²˜ë¦¬í• ê¹Œ?
+	// Q1) ¿©À¯ºÐÀº ¾ó¸¸Å­ÀÌ Àû´çÇÒ±î? 
+	// Q2) Áõ¼³À» ¾ó¸¸Å­ ÇØ¾ß ÇÒ±î?
+	// Q3) ±âÁ¸ÀÇ µ¥ÀÌÅÍ¸¦ ¾î¶»°Ô Ã³¸®ÇÒ±î?
 
-	// size (ì‹¤ì œ ì‚¬ìš© ë°ì´í„° ê°œìˆ˜)
+	// size (½ÇÁ¦ »ç¿ë µ¥ÀÌÅÍ °³¼ö)
 	// 1 2 3 4 5 6 7
 
-	// capacity (ì—¬ìœ ë¶„ì„ í¬í•¨í•œ ìš©ëŸ‰ ê°œìˆ˜)
+	// capacity (¿©À¯ºÐÀ» Æ÷ÇÔÇÑ ¿ë·® °³¼ö)
 	// 1 2 3 4 6 9 13 19 28 
 
 	vector<int> v(1000, 0);
 	vector<int> v2 = v;
 
-	v.resize(1000); // ë°ì´í„° í¬ê¸°ë¥¼ ëª…ì‹œì ìœ¼ë¡œ ê³ ì •
+	v.resize(1000); // µ¥ÀÌÅÍ Å©±â¸¦ ¸í½ÃÀûÀ¸·Î °íÁ¤ 
 
-	v.reserve(1000); // ë°ì´í„° ì—¬ìœ ë¶„ì„ ëª…ì‹œì ìœ¼ë¡œ ê³ ì •
+	v.reserve(1000); // µ¥ÀÌÅÍ ¿©À¯ºÐÀ» ¸í½ÃÀûÀ¸·Î °íÁ¤ 
+	// ÇÏ´Â ÀÌÀ¯ : ±âÁ¸ µ¥ÀÌÅÍ¸¦ º¹»çÇÏ´Â ºñ¿ëÀ» ÁÙÀÌ±â À§ÇØ¼­
 
 	for (int i = 0; i < 1000; i++)
 	{
-		v[i] = 100;
-		v.push_back(100); // ë°ì´í„°ë¥¼ ì¶”ê°€
-		cout << v.size() << " " << v.capacity() << endl;
+		v.push_back(100); // µ¥ÀÌÅÍ¸¦ Ãß°¡
+		cout <<v[i]<<" " << v.size() << " " << v.capacity() << endl;
 	}
 
-	v.clear(); // ë°ì´í„°ì˜ í¬ê¸°ë¥¼ ì´ˆê¸°í™” ì—¬ìœ ë¶„ì€ ë‚¨ì•„ìžˆë‹¤.
-	vector<int>().swap(v); // ìž„ì‹œë²¡í„°ë¥¼ ì´ìš©í•´ ì—¬ìœ ë¶„ ê¹Œì§€ ì´ˆê¸°í™”
+	v.clear(); // µ¥ÀÌÅÍÀÇ Å©±â¸¦ ÃÊ±âÈ­ ¿©À¯ºÐÀº ³²¾Æ	ÀÖ´Ù.
+	vector<int>().swap(v); // ÀÓ½Ãº¤ÅÍ¸¦ ÀÌ¿ëÇØ ¿©À¯ºÐ ±îÁö ÃÊ±âÈ­
 	cout << v.size() << " " << v.capacity() << endl;
 
 	return 0;
